@@ -1,13 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { idGenerator } from "../../../hooks/idGenerator";
 
-import { fetchTodos } from "./request";
-
-const setError = (state, action) => {
-  state.status = 'rejected';
-  state.error = action.payload;
-}
-
 const todoSlice = createSlice({
   name: "todos",
   initialState: {
@@ -60,18 +53,7 @@ const todoSlice = createSlice({
           state.search = payload
     },
 },
-extraReducers: {
-  [fetchTodos.pending]: (state, {payload}) => {
-    state.status = 'loading'
-    state.error = null
-  },
-  [fetchTodos.fulfilled]: (state, {payload}) => {
-    state.status = 'resolve'
-    state.todos = payload
-  },
-  [fetchTodos.rejected]: setError
-}
-})
+});
 
 export const {
   toggleText,

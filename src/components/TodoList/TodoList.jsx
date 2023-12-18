@@ -6,7 +6,7 @@ import "./TodoList.css";
 const TodoList = () => {
   const stateTodos = useSelector(selectTodos)
   const todoSearch = useSelector(selectSearch);
-  // const todoFiltered = useSelector(selectFilteredTodo);
+  const todoFiltered = useSelector(selectFilteredTodo);
 
   const newFilteredTodo = stateTodos.filter((todo) =>
     todo.tdText.toLowerCase().includes(todoSearch.toLowerCase())

@@ -2,10 +2,9 @@ import { useRef } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { BiEditAlt } from "react-icons/bi";
 import { useDispatch } from "react-redux";
-// import { actionCheckid, actionDelete, actionEditItem } from "../../store/slices/todoSlice/action";
+import { checkidTodo, deleteTodo, editTodo } from "../../store/slices/todoSlice/todos";
 
 import "./TodoItem.css";
-import { checkidTodo, deleteTodo, editTodo } from "../../store/slices/todoSlice/todos";
 
 const TodoItem = ({ todo }) => {
 

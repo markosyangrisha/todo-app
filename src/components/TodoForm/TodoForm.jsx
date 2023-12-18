@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { VscSearch } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
-// import { actionToggleText, actionSearch } from "../../store/slices/todoSlice/action"; 
 import { selectIsEditing, selectText } from "../../store/slices/todoSlice/select";
-import { addTodo, getTodos, searchTodo, toggleText } from "../../store/slices/todoSlice/todos";
+import { addTodo, searchTodo, toggleText } from "../../store/slices/todoSlice/todos";
+
 import "./TodoForm.css";
-import { fetchTodos } from "../../store/slices/todoSlice/request";
+
 
 const TodoForm = () => {
   
@@ -19,10 +19,6 @@ const TodoForm = () => {
     formRef.current.focus();
     dispatch(addTodo()); 
   };
-
-  useEffect(() => {
-    dispatch(fetchTodos())
-  }, [dispatch])
 
   return ( 
     <div className="todo-form">

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import {selectTodos} from "../../store/slices/todoSlice/select";
-// import { actionOnClear } from "../../store/slices/todoSlice/action";
 import { onClearTodo } from "../../store/slices/todoSlice/todos";
+
 import "./TodoFooter.css";
 
 const TodoFooter = () => {
